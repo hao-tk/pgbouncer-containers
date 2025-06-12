@@ -23,7 +23,7 @@ ARG PGBOUNCER_VERSION
 # Install build dependencies.
 RUN set -ex; \
     apt-get update && apt-get upgrade -y; \
-    apt-get install -y --no-install-recommends curl make pkg-config libevent-dev build-essential libssl-dev libudns-dev openssl ; \
+    apt-get install -y --no-install-recommends curl make pkg-config libevent-dev build-essential libssl-dev libudns-dev libc-ares2 libc-ares-dev openssl ; \
     apt-get purge -y --auto-remove ; \
     rm -fr /tmp/* ; \
     rm -rf /var/lib/apt/lists/*
