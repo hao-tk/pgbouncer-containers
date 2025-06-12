@@ -32,7 +32,7 @@ RUN set -ex; \
 RUN  curl -sL http://www.pgbouncer.org/downloads/files/${PGBOUNCER_VERSION}/pgbouncer-${PGBOUNCER_VERSION}.tar.gz > pgbouncer.tar.gz ; \
      tar xzf pgbouncer.tar.gz ; \
      cd pgbouncer-${PGBOUNCER_VERSION} ; \
-     sh ./configure ;  \
+     sh ./configure --with-cares;  \
      make
 
 
