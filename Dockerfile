@@ -50,7 +50,7 @@ LABEL name="PgBouncer Container Images" \
 
 RUN  set -ex; \
      apt-get update && apt-get upgrade -y; \
-     apt-get install -y libevent-dev libssl-dev libudns-dev libvshadow-utils findutils; \
+     apt-get install -y libevent-dev libssl-dev libudns-dev libvshadow-utils findutils libc-ares2 libc-ares-dev; \
      apt-get -y install postgresql ; \
      apt-get -y clean ; \
      rm -rf /var/lib/apt/lists/*; \
